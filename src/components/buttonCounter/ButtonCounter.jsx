@@ -1,17 +1,14 @@
 import React from 'react'
 
-export const ButtonCounter = ({ funcionCallback, children }) => {
+export const ButtonCounter = ({ children, setCounter, newValue}) => {
 
-/*
-    Hacer un componente para el boton.
-    atributo: increment = {5}
-    atributo: increment = {-5}
-    atributo: onClick = {fncCallback}
-    color text: blue;
-*/
+const handleOnClick = ()=>{
+    setCounter(newValue)
+}
+
     return (
         <>
-            <button style={{ color: 'blue' }} onClick={funcionCallback}>{children}</button>
+            <button style={{ color: 'blue' }} onClick={handleOnClick}>{children}</button>
         </>
     )
 }
