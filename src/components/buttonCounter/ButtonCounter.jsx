@@ -1,10 +1,13 @@
-import React from 'react'
+import ButtonMui from '@mui/material/Button';
+import React from 'react';
 
-export const ButtonCounter = ({ children, setCounter, newValue}) => {
+export const ButtonCounter = ({ children, setCounter, newValue, startIcon }) => {
 
     return (
         <>
-            <button style={{ color: 'blue' }} onClick={()=>setCounter(newValue)}>{children}</button>
+            <ButtonMui variant="contained" startIcon={startIcon} onClick={() => setCounter(newValue)}>
+                {children}
+            </ButtonMui>
         </>
     )
 }
